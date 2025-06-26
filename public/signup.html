@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JuanCARD - Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <img src="backgroundpic.jpg" alt="Healthcare Background" />
+    </div>
+    <div class="right-panel">
+      <div class="login-box">
+        <div class="logo">
+          <img src="JUANCARDLOGO.png" alt="JuanCARD logo" />
+          <h1>Juan<span class="highlight">CARD</span></h1>
+        </div>
+        <h2>Get Started</h2>
+        <p class="subtitle">Welcome to JuanCard! Let's create your account.</p>
+        
+        <form onsubmit="return handleSignup(event)">
+          <label>First Name</label>
+          <input type="text" placeholder="Enter your first name" required />
+
+          <div class="name-row">
+            <div>
+              <label>Last Name</label>
+              <input type="text" placeholder="Last Name" required />
+            </div>
+            <div>
+              <label>Middle Name</label>
+              <input type="text" placeholder="Middle Name" />
+            </div>
+          </div>
+
+          <label>User Type</label>
+          <div class="radio-group">
+            <label><input type="radio" name="user" value="patient" /> Patient</label>
+            <label><input type="radio" name="user" value="practitioner" /> Medical Practitioner</label>
+          </div>
+
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required />
+
+          <div class="name-row">
+            <div>
+              <label>Password</label>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div>
+              <label>Confirm Password</label>
+              <input type="password" placeholder="Confirm Password" required />
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" required />
+            <span>I agree to the Terms and Conditions and Data Privacy Policy.</span>
+          </div>
+
+          <button type="submit" class="sign-in-btn">Sign Up</button>
+        </form>
+
+        <p class="signup-text">Already have an account? <a href="index.html">Sign in</a></p>
+
+        <script>
+          function handleSignup(event) {
+            event.preventDefault();
+            const userType = document.querySelector('input[name="user"]:checked');
+            if (!userType) {
+              alert("Please select a user type.");
+              return false;
+            }
+            if (userType.value === "patient") {
+              window.location.href = "patient-registration.html";
+            } else {
+              alert("Registration for Medical Practitioners is not available yet.");
+            }
+            return false;
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

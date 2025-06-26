@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="registration-body">
+  <div class="registration-header">
+    <img src="JUANCARDLOGO.png" alt="JuanCARD logo" class="logo-icon" />
+    <h1>Juan<span class="highlight">Card</span></h1>
+  </div>
+  <div class="registration-container">
+    <h2>Patient Registration</h2>
+    <p>Register a new patient for medical record tracking</p>
+
+    <form class="registration-form">
+      <div class="form-section">
+        <h3>👤 Personal Details</h3>
+        <div class="row">
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+        </div>
+        <div class="row">
+          <input type="text" placeholder="Gender" required />
+          <input type="date" placeholder="Date of Birth" required />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>📇 Contact Information</h3>
+        <div class="row">
+          <input type="text" placeholder="Phone Number" required />
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <input type="text" placeholder="Street, City, State, ZIP" required />
+      </div>
+
+      <div class="form-section">
+        <h3>🩺 Medical Information</h3>
+        <input type="text" placeholder="Known Allergies" />
+        <div class="row">
+          <input type="text" placeholder="Existing Medical Conditions" />
+          <input type="text" placeholder="Current Medication" />
+        </div>
+        <input type="text" placeholder="Blood Type" />
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" required />
+        <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</span>
+      </div>
+
+      <div class="button-row">
+        <button type="reset">Clear</button>
+        <button type="submit" class="sign-in-btn">Register Now</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
